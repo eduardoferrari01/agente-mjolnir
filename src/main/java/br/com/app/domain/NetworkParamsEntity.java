@@ -1,0 +1,71 @@
+package br.com.app.domain;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import oshi.software.os.NetworkParams;
+
+public class NetworkParamsEntity {
+
+	 private String hostName;
+	 private String domainName;
+	 private List<String> dnsServers;
+	 private String ipv4DefaultGateway;
+	 private String ipv6DefaultGateway;
+	 
+	 public NetworkParamsEntity(){}
+	 public NetworkParamsEntity(NetworkParams net)
+	 {
+		this.hostName = net.getHostName();
+		this.domainName = net.getDomainName();
+		this.dnsServers = new ArrayList<String>();
+		
+		for(String dns : net.getDnsServers())
+		{
+			this.dnsServers.add(dns);
+		}
+	 }
+
+	public String getHostName() {
+		return hostName;
+	}
+
+	public void setHostName(String hostName) {
+		this.hostName = hostName;
+	}
+
+	public String getDomainName() {
+		return domainName;
+	}
+
+	public void setDomainName(String domainName) {
+		this.domainName = domainName;
+	}
+
+	public List<String> getDnsServers() {
+		return dnsServers;
+	}
+
+	public void setDnsServers(List<String> dnsServers) {
+		this.dnsServers = dnsServers;
+	}
+
+	public String getIpv4DefaultGateway() {
+		return ipv4DefaultGateway;
+	}
+
+	public void setIpv4DefaultGateway(String ipv4DefaultGateway) {
+		this.ipv4DefaultGateway = ipv4DefaultGateway;
+	}
+
+	public String getIpv6DefaultGateway() {
+		return ipv6DefaultGateway;
+	}
+
+	public void setIpv6DefaultGateway(String ipv6DefaultGateway) {
+		this.ipv6DefaultGateway = ipv6DefaultGateway;
+	}
+	 
+	 
+	 
+}
