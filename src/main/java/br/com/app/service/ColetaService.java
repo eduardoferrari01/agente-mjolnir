@@ -1,45 +1,35 @@
 package br.com.app.service;
 
-import java.io.IOException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectReader;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-
-import br.com.app.util.Hash;
-
- 
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+import br.com.app.model.ColetaResultado;
+import br.com.app.repository.ColetaRepository;
 
 @Service
+@Transactional(readOnly = true, propagation = Propagation.REQUIRED)
 public class ColetaService {
 
-	public void coletar() {
-		ExecutorService executor = Executors.newFixedThreadPool(10);
-		executor.submit(() -> {
-			String json = addHash(Coleta.getInstance().coletar());
-			
-		});
+  @Autowired
+  private ColetaRepository coletaRepositoy;
 
-	}
+  @Transactional(readOnly = false)
+  public void save(ColetaResultado resultado) {
 
-	public String addHash(String json) {
-		ObjectMapper mapper = new ObjectMapper();
-		ObjectReader reader = mapper.reader();
-		JsonNode node = null;
-		try {
-			node = reader.readTree(json);
-			((ObjectNode) node).put("id", Hash.getInstance().getHash() );
+    coletaRepositoy.save(resultado);
+  }
 
-		} catch (IOException e) {
+  public ColetaResultado findFirstByOrderByScanDateTimeDesc() {
+    return coletaRepositoy.findFirstByOrderByScanDateTimeDesc();
+  }
 
-			e.printStackTrace();
-		}
-		return node.toString();
-	}
-	
+  public List<ColetaResultado> findByStatus(Boolean status) {
+
+    return coletaRepositoy.findByEnviadoStatus(status);
+  }
+
+
+
 }
