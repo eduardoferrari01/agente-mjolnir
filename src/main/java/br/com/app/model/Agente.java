@@ -43,7 +43,4 @@ public class Agente implements Serializable {
   public void setId(String id) {
     this.id = id;
   }
-
-
-
 }
