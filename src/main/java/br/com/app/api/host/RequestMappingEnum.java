@@ -3,7 +3,7 @@ package br.com.app.api.host;
 public enum RequestMappingEnum {
 	MEMORY("memory"), PROCESSOR("processor"), SENSORS("sensors"), GRAPHICS_CARDS("graphicscards"),
 	COMPUTER_SYSTEM("computersystem"), DISK_STORES("diskstores"), DISPLAYS("displays"), NETWORKIFS("networkifs"),
-	POWER_SOURCES("powersources");
+	POWER_SOURCES("powersources"),CONFIG_CREATE("config");
 
 	private String value;
 
