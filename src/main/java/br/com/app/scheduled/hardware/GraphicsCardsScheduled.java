@@ -27,6 +27,6 @@ public class GraphicsCardsScheduled implements InitializingBean, SchedulingTasks
 	@Override
 	public void scheduling() {
 
-		requestColeta.enviar(coleta);
+		requestColeta.post(coleta);
 	}
 }

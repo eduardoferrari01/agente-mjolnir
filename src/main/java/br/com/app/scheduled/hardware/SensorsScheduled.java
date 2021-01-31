@@ -27,7 +27,7 @@ public class SensorsScheduled implements InitializingBean, SchedulingTasks {
 	@Override
 	public void scheduling() {
 
-		requestColeta.enviar(sensorColeta);
+		requestColeta.post(sensorColeta);
 
 	}
 }

@@ -23,7 +23,7 @@ public class ProcessorController {
 		
 		Coleta processorColeta = new ProcessorCollect();
 		
-		requestColeta.enviar(processorColeta);
+		requestColeta.post(processorColeta);
 		 
 	}
 	

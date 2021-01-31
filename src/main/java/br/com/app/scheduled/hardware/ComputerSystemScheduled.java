@@ -27,7 +27,7 @@ public class ComputerSystemScheduled implements InitializingBean, SchedulingTask
 	@Override
 	public void scheduling() {
 
-		requestColeta.enviar(coleta);
+		requestColeta.post(coleta);
 	}
 
 }
