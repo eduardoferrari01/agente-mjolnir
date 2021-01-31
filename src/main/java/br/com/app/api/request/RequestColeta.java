@@ -18,6 +18,6 @@ public class RequestColeta extends Request {
 	
 	public void post(Coleta coleta) {
 		
-		this.serveApi.post(coleta.coletar().toJson());
+		this.serveApi.post(coleta.coletaResultadoBuilder().toJson());
 	}
 }

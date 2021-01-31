@@ -4,5 +4,5 @@ import br.com.app.model.ColetaResultado;
 
 public interface Coleta {
 
-	ColetaResultado coletar();
+	ColetaResultado coletaResultadoBuilder();
 }

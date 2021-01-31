@@ -1,14 +1,13 @@
 package br.com.app.coleta.hardware;
 
-import br.com.app.coleta.factory.Coleta;
-import br.com.app.coleta.factory.SystemInfoAbstract;
-import br.com.app.model.ColetaResultado;
+import br.com.app.coleta.factory.SystemInfoFactory;
 
-public class PowerSourcesCollect extends SystemInfoAbstract implements Coleta {
+public class PowerSourcesCollect extends ColetaTemplate {
 
 	@Override
-	public ColetaResultado coletar() {
-		 
-		return 	new ColetaResultado.Builder(hardware.getPowerSources()).build();
+	public Object coletar() {
+
+		return SystemInfoFactory.createHardware().getPowerSources();
+
 	}
 }

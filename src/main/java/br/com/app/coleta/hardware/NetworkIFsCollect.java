@@ -1,14 +1,12 @@
 package br.com.app.coleta.hardware;
 
-import br.com.app.coleta.factory.Coleta;
-import br.com.app.coleta.factory.SystemInfoAbstract;
-import br.com.app.model.ColetaResultado;
+import br.com.app.coleta.factory.SystemInfoFactory;
 
-public class NetworkIFsCollect extends SystemInfoAbstract implements Coleta {
+public class NetworkIFsCollect extends ColetaTemplate{
 
 	@Override
-	public ColetaResultado coletar() {
+	public Object coletar() {
 
-		return 	new ColetaResultado.Builder(hardware.getNetworkIFs()).build();
+		return SystemInfoFactory.createHardware().getNetworkIFs();
 	}
 }

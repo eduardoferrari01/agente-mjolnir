@@ -26,7 +26,7 @@ public class HardwarCollectTest {
 		
 		Coleta computerSystemCollect = new ComputerSystemCollect();
 		
-		ColetaResultado coletaResultado =  computerSystemCollect.coletar();
+		ColetaResultado coletaResultado =  computerSystemCollect.coletaResultadoBuilder();
 		coletaResultadoIsValid(coletaResultado);
 	}
 	
@@ -35,7 +35,7 @@ public class HardwarCollectTest {
 		
 		Coleta processorCollect = new ProcessorCollect();
 		
-		ColetaResultado coletaResultado =  processorCollect.coletar();
+		ColetaResultado coletaResultado =  processorCollect.coletaResultadoBuilder();
 		coletaResultadoIsValid(coletaResultado);
 	}
 	
@@ -44,7 +44,7 @@ public class HardwarCollectTest {
 		
 		Coleta sensorsCollect = new SensorsCollect();
 		
-		ColetaResultado coletaResultado =  sensorsCollect.coletar();
+		ColetaResultado coletaResultado =  sensorsCollect.coletaResultadoBuilder();
 		coletaResultadoIsValid(coletaResultado);
 	}
 	
@@ -53,7 +53,7 @@ public class HardwarCollectTest {
 		
 		Coleta powerSourcesCollect = new PowerSourcesCollect();
 		
-		ColetaResultado coletaResultado =  powerSourcesCollect.coletar();
+		ColetaResultado coletaResultado =  powerSourcesCollect.coletaResultadoBuilder();
 		coletaResultadoIsValid(coletaResultado);
 	}
 	
@@ -62,7 +62,7 @@ public class HardwarCollectTest {
 		
 		Coleta networkIFsCollect = new NetworkIFsCollect();
 		
-		ColetaResultado coletaResultado =  networkIFsCollect.coletar();
+		ColetaResultado coletaResultado =  networkIFsCollect.coletaResultadoBuilder();
 		coletaResultadoIsValid(coletaResultado);
 	}
 	
@@ -72,7 +72,7 @@ public class HardwarCollectTest {
 		
 		Coleta memoryCollect = new MemoryCollect();
 		
-		ColetaResultado coletaResultado =  memoryCollect.coletar();
+		ColetaResultado coletaResultado =  memoryCollect.coletaResultadoBuilder();
 		coletaResultadoIsValid(coletaResultado);
 	}
 	
@@ -81,7 +81,7 @@ public class HardwarCollectTest {
 		
 		Coleta graphicsCardsCollect = new GraphicsCardsCollect();
 		
-		ColetaResultado coletaResultado =  graphicsCardsCollect.coletar();
+		ColetaResultado coletaResultado =  graphicsCardsCollect.coletaResultadoBuilder();
 		coletaResultadoIsValid(coletaResultado);
 	}
 	
@@ -90,7 +90,7 @@ public class HardwarCollectTest {
 		
 		Coleta displaysCollect = new DisplaysCollect();
 		
-		ColetaResultado coletaResultado =  displaysCollect.coletar();
+		ColetaResultado coletaResultado =  displaysCollect.coletaResultadoBuilder();
 		coletaResultadoIsValid(coletaResultado);
 	}
 	
@@ -99,7 +99,7 @@ public class HardwarCollectTest {
 		
 		Coleta diskStoresCollect = new DiskStoresCollect();
 		
-		ColetaResultado coletaResultado =  diskStoresCollect.coletar();
+		ColetaResultado coletaResultado =  diskStoresCollect.coletaResultadoBuilder();
 		coletaResultadoIsValid(coletaResultado);
 	}
 	

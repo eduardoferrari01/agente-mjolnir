@@ -1,14 +1,13 @@
 package br.com.app.coleta.hardware;
 
-import br.com.app.coleta.factory.Coleta;
-import br.com.app.coleta.factory.SystemInfoAbstract;
-import br.com.app.model.ColetaResultado;
+import br.com.app.coleta.factory.SystemInfoFactory;
 
-public class ProcessorCollect extends SystemInfoAbstract implements Coleta{
+public class ProcessorCollect extends ColetaTemplate {
 
 	@Override
-	public ColetaResultado coletar() {
-	  
-		return 	new ColetaResultado.Builder(hardware.getProcessor()).build();
+	public Object coletar() {
+
+		return SystemInfoFactory.createHardware().getProcessor();
+
 	}
 }
