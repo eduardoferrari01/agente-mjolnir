@@ -17,7 +17,7 @@ import br.com.app.coleta.os.VersionInfoCollect;
 import br.com.app.model.ColetaResultado;
 import br.com.app.util.Hash;
 
-public class SystemCollectTest {
+public class OSCollectTest {
 
 	@Test
 	public void deveRetornarUmOperatingSystemCollect() {
