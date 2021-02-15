@@ -7,6 +7,13 @@ import static org.junit.Assert.assertTrue;
 import org.junit.jupiter.api.Test;
 
 import br.com.app.coleta.factory.Coleta;
+import br.com.app.coleta.os.FileSystemCollect;
+import br.com.app.coleta.os.InternetProtocolStatsCollect;
+import br.com.app.coleta.os.NetworkParamsCollect;
+import br.com.app.coleta.os.OperatingSystemCollect;
+import br.com.app.coleta.os.ServicesCollect;
+import br.com.app.coleta.os.SessionsCollect;
+import br.com.app.coleta.os.VersionInfoCollect;
 import br.com.app.model.ColetaResultado;
 import br.com.app.util.Hash;
 
