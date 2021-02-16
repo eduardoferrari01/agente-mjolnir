@@ -1,4 +1,4 @@
-package br.com.app.coleta.system;
+package br.com.app.coleta.os;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
