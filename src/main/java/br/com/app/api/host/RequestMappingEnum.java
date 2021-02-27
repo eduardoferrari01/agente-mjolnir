@@ -5,7 +5,7 @@ public enum RequestMappingEnum {
 	COMPUTER_SYSTEM("computersystem"), DISK_STORES("diskstores"), DISPLAYS("displays"), NETWORKIFS("networkifs"),
 	POWER_SOURCES("powersources"), CONFIG_CREATE("config"), FILE_SYSTEM("filesystem"),
 	INTERNET_PROTOCOLSTATS("internetprotocolstats"), NETWORK_PARAMS("networkparams"),
-	OPERATING_SYSTEM("operatingsystem"), SERVICES("services"), SESSIONS("sessions"), VERSION_INFO("versioninfo");
+	OPERATING_SYSTEM("operatingsystem"),PROCESSES("processe"), SERVICES("services"), SESSIONS("sessions"), VERSION_INFO("versioninfo");
 
 	private String value;
 
