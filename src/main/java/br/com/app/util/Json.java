@@ -3,6 +3,7 @@ package br.com.app.util;
 import java.io.IOException;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Json  {
@@ -23,6 +24,7 @@ public class Json  {
 	public Object stringToObject(String json, Class<?> clas){
 		
 		ObjectMapper mapper = new ObjectMapper( );
+		mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 		
 		try {
 			return mapper.readValue(json,clas);
